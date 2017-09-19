@@ -28,7 +28,7 @@ export default class CircularProgress extends React.Component {
     const { size, width, tintColor, backgroundColor, style, rotation, linecap, children } = this.props;
     const backgroundPath = this.circlePath(size / 2, size / 2, size / 2 - width / 2, 0, 360 * .9999);
 
-    const fill = this.extractFill(this.props.fill);    
+    const fill = this.extractFill(this.props.fill);
     const circlePath = this.circlePath(size / 2, size / 2, size / 2 - width / 2, 0, (360 * .9999) * fill / 100);
 
     return (
@@ -36,7 +36,7 @@ export default class CircularProgress extends React.Component {
         <Surface
           width={size}
           height={size}>
-          <Group rotation={rotation - 90} originX={size/2} originY={size/2}>
+          <Group rotation={rotation - 180} originX={size/2} originY={size/2}>
             <Shape d={backgroundPath}
                    stroke={backgroundColor}
                    strokeWidth={width}/>
